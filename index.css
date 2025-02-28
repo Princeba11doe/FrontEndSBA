@@ -1,0 +1,137 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6a0dad; /* Purple accent */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+ position: relative;
+ z-index: 10;
+ backdrop-filter: blur(5px); /* Optional: Adds a glass effect */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push items to the right */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 1;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+
+
+/* Login Button */
+.login-button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #eae0ff; /* Light purple background */
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+.signup-button {
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Ensure the video fills the entire screen */
+.back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the screen without distortion */
+  z-index: -1; /* Moves the video behind all other elements */
+}
+
+/* Ensure content is above the video */
+.hero-section {
+  position: relative;
+  z-index: 1; /* Places content above the background video */
+  text-align: center;
+  color: white; /* Ensures text is readable over the video */
+  padding: 100px 20px;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust based on navbar height */
+  left: 0;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Show menu when active */
+.menu.active {
+  display: block;
+}
